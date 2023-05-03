@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <script defer src="js/index.js"></script>
+</head>
+
+<body>
+    <main>
+        <section id="form-section">
+
+            <figure class="container">
+                <img src="images/banner.jpeg">
+                <h3 id="form-title">Business Search</h3>
+                <p id="form-subtitle">Fill out the form to get businesses near you!</p>
+            </figure>
+
+            <form name="business-search-form" id="business-search-form">
+                <div id="keyword-div">
+                    <label for="keyword">Keyword <span class="require">*</span></label><br>
+                    <input type="text" name="keyword" id="keyword" required="required" autocomplete="on"><br>
+                </div>
+
+                <div id="distance-div">
+                    <label for="distance">Distance(miles)</label><br>
+                    <input type="text" name="distance" id="distance" value="10">
+                </div>
+
+                <div id="category-div">
+                    <label for="category">Category <span class="require">*</span></label><br>
+                    <select name="category" id="category" required>
+                        <option value="Default">Default</option>
+                        <option value="Arts-and-Entertainment">Arts &amp; Entertainment</option>
+                        <option value="Health-and-Medicine">Health &amp; Medicine</option>
+                        <option value="Hotels-and-Travel">Hotels &amp; Travel</option>
+                        <option value="Food">Food</option>
+                        <option value="Professional-Services">Professional Services</option>
+                    </select><br>
+                </div>
+
+                <div id="location-div">
+                    <label for="location">Location <span class="require">*</span></label><br>
+                    <input type="text" name="location" id="location" required="required" autocomplete="on">
+                </div>
+
+                <hr id="form-hr" />
+                <label for="location-detect">Want us to auto-detect your location? Check here</label>
+                <input type="checkbox" id="location-check-box" name="auto-location"> <br />
+
+                <div id="buttons">
+                    <input type="submit" value="SUBMIT">
+                    <input type="reset" value="CLEAR">
+                </div>
+            </form>
+        </section>
+
+        <section id="error-section">No record has been found</section>
+        <section id="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Image</th>
+                        <th onclick="handleSortTable(2)">Business Name</th>
+                        <th onclick="handleSortTable(3)">Rating</th>
+                        <th onclick="handleSortTable(4)">Distance (miles)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+
+        <section id="card-section">
+            <h3 id="card-title"></h3>
+            <hr id="card-hr" />
+            <ul class="grid">
+
+                <li id="card-status">
+                    <h3 class="card-cell-titles">Status</h3>
+                    <p id="card-status-box" class="status status-closed"></p>
+                </li>
+
+                <li id="card-category">
+                    <h3 class="card-cell-titles">Category</h3>
+                    <p id="card-category-content" class="card-cell-content"></p>
+                </li>
+
+                <li id="card-address">
+                    <h3 class="card-cell-titles">Address</h3>
+                    <p id="card-address-content" class="card-cell-content"></p>
+                </li>
+
+                <li id="card-phonenumber">
+                    <h3 class="card-cell-titles">Phone Number</h3>
+                    <p id="card-phonenumber-content" class="card-cell-content"></p>
+                </li>
+
+                <li id="card-transactions">
+                    <h3 class="card-cell-titles">Transactions Supported</h3>
+                    <p id="card-transactions-content" class="card-cell-content"></p>
+                </li>
+
+                <li id="card-price">
+                    <h3 class="card-cell-titles">Price</h3>
+                    <p id="card-price-content" class="card-cell-content"></p>
+                </li>
+
+                <li id="card-moreinfo">
+                    <h3 class="card-cell-titles">More Info</h3>
+                    <a target="_blank" id="card-moreinfo-content" href="#">Yelp</a>
+                </li>
+            </ul>
+
+            <footer>
+                <figure>
+                    <img id="card-image-1" src="https://s3-media4.fl.yelpcdn.com/bphoto/MJUkD3lWR3-2hO7fZsg_0g/o.jpg" alt="">
+                    <figcaption>Photo 1</figcaption>
+                </figure>
+                
+                <figure>
+                    <img id="card-image-2" src="https://s3-media3.fl.yelpcdn.com/bphoto/RGpAcHzVFVFYgblqjyFLVQ/o.jpg" alt="">
+                    <figcaption>Photo 2</figcaption>
+                </figure>
+
+                <figure>
+                    <img id="card-image-3" src="https://s3-media3.fl.yelpcdn.com/bphoto/-qKW6OgguMfif1V0Fi9R3g/o.jpg" alt="">
+                    <figcaption>Photo 3</figcaption>
+                </figure>
+            </footer>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

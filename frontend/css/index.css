@@ -1,0 +1,371 @@
+:root {
+    --font-color: #4f6fad;
+    --bg-color: #e6e6e6;
+    --form-bg-color: #ffffff;
+    --form-border-color: #d9d9d9;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-section {
+    background-color: var(--form-bg-color);
+    display: block;
+    border: 5px solid var(--form-border-color);
+    height: 570px;
+    width: 685px;
+    padding: 0px;
+}
+
+#business-search-form {
+    padding: 50px;
+    padding-top: 0px;
+}
+
+.container {
+    width: 100%;
+    height: 130px;
+    margin: 0px;
+    position: relative;
+    text-align: center;
+    display: block;
+}
+
+.container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 93%;
+}
+
+#form-title {
+    position: absolute;
+    top: 40px;
+    left: 45px;
+    color: white;
+    margin: 0px;
+    font-size: 22px;
+}
+
+#form-subtitle {
+    position: absolute;
+    top: 90px;
+    left: 45px;
+    color: white;
+    margin: 0px;
+    font-size: 16px;
+}
+
+#distance-div,
+#keyword-div,
+#category-div,
+#location-div {
+    margin: 10px 0px;
+}
+
+#keyword-div {
+    margin-top: 30px;
+}
+
+#distance-div {
+    width: 50%;
+    float: left;
+}
+
+#category-div {
+    width: 50%;
+    float: right;
+}
+
+label {
+    display: inline-block;
+    color: #4f6fad;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+label[for="location-detect"] {
+    font-size: 18px;
+}
+
+#keyword,
+#location,
+#category,
+#distance {
+    display: inline-block;
+    border: 1px solid #d7d7d7;
+    box-sizing: border-box;
+    /* padding: 1px; */
+    height: 35px;
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+#keyword:focus,
+#location:focus,
+#category:focus,
+#distance:focus {
+    outline: 1px solid black;
+}
+
+#category {
+    max-width: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+#keyword,
+#location {
+    width: 100%;
+}
+/* 
+input#location:disabled {
+    background-color: #E2E0E2;
+} */
+
+input[type="submit"],
+input[type="reset"] {
+    color: white;
+    height: 49px;
+    width: 128px;
+    border: none;
+    border-bottom: 4px solid;
+    font-size: 16px;
+    padding-top: 4px;
+    font-weight: 100;
+}
+
+input[type="submit"] {
+    /* background-color: #4763A1; #4f6fad; */
+    background-color: #4763A1;
+    border-bottom-color: #384d78;
+}
+
+input[type="submit"]:hover {
+    background-color: #5170A8;
+}
+
+input[type="submit"]:active {
+    outline: 1px solid black;
+}
+
+input[type="reset"] {
+    background-color: #ffb706;
+    border-bottom-color: #fa8500;
+}
+
+input[type="reset"]:active {
+    outline: 1px solid black;
+}
+
+input[type="reset"]:hover {
+    background-color: #E69C02;
+}
+
+#buttons {
+    margin-top: 20px;
+}
+
+form > hr#form-hr {
+    margin: 20px 0px;
+    border-top: 1px solid var(--font-color);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+span.require {
+    color: #efa4ba;
+}
+
+#error-section {
+    margin-top: 30px;
+    background-color: white;
+    width: 954px;
+    text-align: center;
+    display: none;
+}
+
+#table-section {
+    margin-top: 100px;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: white;
+    width: 954px;
+    display: none;
+    counter-reset: rowNumber;
+}
+
+table tr th {
+    background-color: var(--font-color);
+    border: 1px solid white;
+    border-top: none;
+    text-align: center;
+    height: 45px;
+}
+
+table > tbody > tr {
+    counter-increment: rowNumber;
+}
+
+table > tbody > tr > td {
+    border: 1px solid var(--bg-color);;
+    text-align: center;
+}
+
+table > tbody > tr > td:first-child::before {
+    content: counter(rowNumber);
+    margin: auto;
+}
+
+/* table row widths */
+table tr th:nth-child(1) {
+    width: 50px;
+    border-left: none;
+}
+
+table tr th:nth-child(2) {
+    width: 100px;
+}
+
+table tr th:nth-child(3) {
+    width: 520px;
+    cursor: pointer;
+}
+
+table tr th:nth-child(4), table tr th:nth-child(5) {
+    width: 142px;
+    cursor: pointer;
+}
+
+table tr th:nth-child(5) {
+    border-right: none;
+}
+
+/* table image */
+table tr td:nth-child(2) img {
+    object-fit: fill;
+    height: 92px; 
+    width: 92px; 
+}
+
+table > tbody > tr > td:nth-child(3) p:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+#card-section {
+    background-color: white;
+    width: 770px;
+    height: 740px;
+    padding: 17px;
+    display: none;
+    margin-top: 30px;
+}
+
+#card-title {
+    text-align: center;
+}
+
+#card-section > hr {
+    margin: 20px 0px;
+    border-top: 2px solid var(--bg-color);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+#card-section > ul.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    list-style-type: none;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    row-gap: 20px;
+}
+
+.card-cell-titles {
+    margin: 0px;
+}
+
+.card-cell-content {
+    margin: 3px 0px 0px 0px;
+    font-size: 14px;
+}
+
+#card-section > footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#card-section > footer > figure {
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid var(--bg-color);;
+    height: 354px;
+    width: 238px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#card-section > footer > figure:hover {
+    border: 1px solid black;
+}
+
+#card-section > footer > figure > img {
+    object-fit: scale-down;   
+    max-height: 317px;
+    max-width: 238px;
+    margin: 0;
+    display: block;
+}
+
+#card-section > footer > figure > figcaption {
+    text-align: center;
+    display: block;
+    margin-bottom: 5px;
+    bottom: 5px;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    color: black;
+    font-size: 12px;
+}
+
+.status-closed{   
+    background-color: red;  
+}
+
+.status-closed::after {   
+    content: "Closed";
+}
+
+.status-open {
+    background-color: green;  
+}
+
+.status-open::after {
+    content: "Open Now";
+}
